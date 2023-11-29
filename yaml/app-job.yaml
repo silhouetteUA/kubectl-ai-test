@@ -1,0 +1,11 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: app-job-rsync
+spec:
+  template:
+    spec:
+      containers:
+      - name: init
+        image: google/cloud-sdk:275.0.0-alpine
+        command: ["/bin/sh", "-c", "gsutil -m rsync -dr gs://glow-sportradar/ /data/input"]
