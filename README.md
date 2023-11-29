@@ -12,5 +12,5 @@ compose k8s manifests using kubectl-ai plugin and OpenAI
 |Job|create a Job with name=app-job-rsync with init container name=init image google/cloud-sdk:275.0.0-alpine and command /bin/sh -c gsutil -m rsync -dr gs://glow-sportradar/ /data/input|example of Job|[link](yaml/app-job.yaml)|
 |multicontainer|create pod with two conatiners, first container name is 1st and image is nginx while second container name is 2nd with image=busybox which executes command sleep 3600|pod with two containers|[link](yaml/app-multicontainer.yaml)|
 |resources|create a pod with name mypod using image=nginx and set request cpu=100m, memory=128Mi while set limits to cpu=100m and memory 256Mi| resources example: allocate and limit|[link](yaml/app-resources.yaml)|
-|secret|create pod with name=my-secret with container name=mypod and image=redis, also inject readOnly secret with name=simple-secret located on volume name=foo mountPath=/etc/foo| secret injection|[link](yaml/app-secret.yaml)|
+|secret|create pod with name=my-secret with container name=mypod and image=redis, also inject readOnly secret with name=simple-secret located on volume name=foo mountPath=/etc/foo| secret injection|[link](yaml/app-secret-env.yaml)|
 
